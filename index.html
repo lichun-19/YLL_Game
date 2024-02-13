@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Find the Fault Game</title>
+  </head>
+  <body>
+    <div id="homePage" class="bg">
+      <h1>Find the Fault</h1>
+      <button id="playButton">PLAY</button>
+    </div>
+
+    <div id="playPage" class="play-area">
+        <!-- <div class="score-container">
+            <div id="score">Score: 0</div>
+            <div id="bestRecord">Best Record: 0</div>
+        </div> -->
+        <div class="score-container">
+            <div id="score">Score: 0</div>
+            <div id="bestRecord">Best Record: 0</div>
+            <button id="selectionButton">☰</button> <!-- Selection Button -->
+            <div id="selectionMenu" class="selection-menu">
+                <button onclick="goHome()">HOME</button>
+                <button id="pauseResumeButton" onclick="togglePauseResume()">PAUSE</button>
+                <button onclick="restartGame()">RESTART</button>
+            </div>
+        </div>
+        <h2>Level N</h2>
+        <div id="imagesContainer" class="images-container">
+            <div class="image-btn" onclick="revealAnswer('FAKE')">
+                <img src="img/flood_1.png" alt="Fake">
+                <!-- <span>FAKE</span> -->
+            </div>
+            <div class="image-btn" onclick="revealAnswer('REAL')">
+                <img src="img/flood_2.jpeg" alt="Real">
+                <!-- <span>REAL</span> -->
+            </div>
+        </div>
+        <div id="answerDisplay" class="answer-display"></div>
+
+        <div id="messageDisplay" class="message-display"></div>
+
+    </div>
+    
+    
+
+    <script src="script.js"></script>
+  </body>
+</html>
